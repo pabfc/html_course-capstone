@@ -1,0 +1,10 @@
+
+.banner logo {
+  background-image: url("../images/ic-logo.svg");
+}
+
+.banner nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
