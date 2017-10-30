@@ -162,11 +162,45 @@ p {
     background-color: yellow;
     display: flex;
     flex-flow: column;
+    align-items: center;
   }
 
   .learn img {
+    width: 95%;
+    padding: 32px 16px;
+    margin: 0px 8px;
+  }
+
+
+  .learn .text_right .button {
+    padding: 8px 30px;
+    background-color: rgb(80,80,80);
+    color: white;
+    text-align: center;
+    width: 90%;
+  }
+
+  .practicing .left_panel {
+    display: none;
+  }
+
+  .practicing .right_panel {
+    width: 100%;
+    padding: 16px 16px;
+  }
+
+  .read {
+    display:flex;
+    flex-flow: column;
+  }
+
+  .read img {
     width: 100%;
     height: 100%;
+  }
+
+  .text_panel h3, .text_panel p, .text_panel span {
+    margin: 16px 32px;
   }
 
 }
