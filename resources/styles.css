@@ -1,5 +1,5 @@
-p, h2, h3 {
-  font-family: sans-serif;
+p, h2, h3, span {
+  font-family: 'Source Sans Pro', sans-serif;
   color: rgb(80,80,80);
 }
 
@@ -14,6 +14,10 @@ h3 {
 }
 
 p {
+  font-size: 16px;
+}
+
+span {
   font-size: 16px;
 }
 
@@ -78,12 +82,21 @@ p {
   width: 80%;
 }
 
-.learn .text_right .button {
-  padding: 8px 30px;
-  background-color: rgb(80,80,80);
-  color: white;
-  text-align: center;
+/*.learn .text_right .button {*/
+
+#start_button p {
+  background-color: grey;
+  color: black;
   width: 50%;
+  padding: 8px 30px;
+  text-align: center;
+}
+
+
+#start_button p:hover {
+  background-color: lightgreen;
+  color: black;
+  font-weight: 600;
 }
 
 /* Practicing */
@@ -110,7 +123,8 @@ p {
   padding: 0px 32px;
 }
 
-.practicing .right_panel {
+/*.practicing .right_panel {*/
+.right_panel {
   width: 40%;
   padding: 16px 32px;
 }
@@ -121,7 +135,13 @@ p {
   padding: 16px 16px;
 }
 
-.practicing .text_panel {
+
+#read_orientation:hover, #read_campus:hover, #read_lecture:hover {
+  background-color: lightgrey;
+}
+
+/*.practicing .text_panel {*/
+.text_panel {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,7 +159,91 @@ p {
   display:flex;
 }
 
+/* Learning */
 
+.learning {
+  background-color: lightgrey;
+}
+
+.learning h2 {
+  padding: 32px 0px;
+  text-align: center;
+}
+
+.learning_all {
+  display: flex;
+  flex-flow: row;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.learning .learn_container {
+  margin: 0px 8px 32px 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.learning .learn_container img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.learn_container h3, .learn_container p {
+  margin-left: 16px;
+}
+
+/* Thesis */
+
+
+.thesis h2 {
+  text-align: center;
+}
+
+.thesis_video_panel {
+  display: flex;
+}
+
+.thesis video {
+  width: 60%;
+  height: 100%;
+  margin: 0px 24px;
+  padding:16px 0px;
+}
+
+#thesis_fisma:hover, #thesis_now:hover{
+  background-color: lightgrey;
+}
+
+.thesis_text {
+  margin: 0px 24px;
+  width: 60%;
+}
+
+.thesis_text h3 {
+  margin-bottom: 0.5em;
+}
+
+footer {
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+.last_line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_footer {
+  margin: 8px 8px;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.nav_footer span {
+  margin: 8px 8px;
+}
 /* Mobile */
 
 @media only screen and (min-width: 320px) and (max-width: 720px) {
@@ -172,7 +276,8 @@ p {
   }
 
 
-  .learn .text_right .button {
+  /*.learn .text_right .button {*/
+  #start_button p{
     padding: 8px 30px;
     background-color: rgb(80,80,80);
     color: white;
@@ -184,6 +289,7 @@ p {
     display: none;
   }
 
+/*  .practicing .right_panel {*/
   .practicing .right_panel {
     width: 100%;
     padding: 16px 16px;
@@ -201,6 +307,35 @@ p {
 
   .text_panel h3, .text_panel p, .text_panel span {
     margin: 16px 32px;
+  }
+
+  .learning_all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .learning {
+    background-color: white;
+  }
+
+  .learning .learn_container {
+    background-color: lightgrey;
+  }
+
+  .learn_container img, .learn_container h2, .learn_container p {
+    display: none;
+  }
+
+  .thesis video {
+    width: 100%;
+  }
+
+  .right_panel {
+    display: none;
+  }
+
+  .thesis_text {
+    display: none;
   }
 
 }
